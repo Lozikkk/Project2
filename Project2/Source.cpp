@@ -2,6 +2,7 @@
 #include <time.h>
 #include <cmath>
 #include <iomanip>
+#include <cstring>
 using namespace std;
 
 
@@ -99,16 +100,49 @@ void main()
 
 	/*Dopushe druguj masiv u pershuj pevnu kilkist' elementiv*/
 
-	char arr[255]="Hi ";
+	/*char arr[255]="Hi ";
 	char arr2[] = "123456789";
 
 	strncat_s (arr, arr2, 5);
 
 	cout << arr << endl;
+	*/
 
-	cout << arr << endl;
+	
+	char arr[255];
+	cout << "Enter symbols-->" << endl;
+	cin.getline(arr, 255);
 
-
+	int count=0, count1=0, count2=0, count3=0;
+		
+	
+	for (int i = 0; i < strlen (arr); i++)
+	{
+		if (isspace(arr[i]))
+		{
+			
+			count++;
+		}
+		if (isupper(arr[i]))
+		{
+			
+			count1++;
+		}
+		if (islower(arr[i]))
+		{
+			
+			count2++;
+		}
+		if (isdigit(arr[i]))
+		{
+			
+			count3++;
+		}
+	}
+	cout << "Spacebar ----- " << count << endl;
+	cout << "Big letter ----- " << count1 << endl;
+	cout << "Small letter ----- " << count2 << endl;
+	cout << "Digits ----- " << count3 << endl;
 
 
 
