@@ -106,7 +106,7 @@ void main()
 
 	cout << arr << endl;
 
-
+	cout << arr << endl;
 
 
 
